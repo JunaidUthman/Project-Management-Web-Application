@@ -1,0 +1,202 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Dynamic background with animated decoration */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #7b3f96, #d1b3ff);
+    animation: gradientAnimation 8s infinite alternate;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Adding floating circles for decoration */
+.background::before,
+.background::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(199, 135, 255, 0.3);
+    animation: float 10s infinite ease-in-out;
+}
+
+.background::before {
+    width: 150px;
+    height: 150px;
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.background::after {
+    width: 200px;
+    height: 200px;
+    bottom: 15%;
+    right: 25%;
+    animation-delay: 3s;
+}
+
+/* Adding additional moving elements */
+.moving-square {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: moveSquare 8s infinite linear;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.moving-square:nth-child(1) {
+    top: 5%;
+    left: 10%;
+    animation-delay: 2s;
+}
+
+.moving-square:nth-child(2) {
+    bottom: 10%;
+    right: 15%;
+    animation-delay: 4s;
+}
+
+.moving-square:nth-child(3) {
+    top: 50%;
+    left: 50%;
+    animation-delay: 6s;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes moveSquare {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20px, 30px) rotate(20deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(135deg, #ffffff, #d1b3ff);
+    }
+    100% {
+        background: linear-gradient(135deg, #f6fcff, #b3d1ff);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 800px;
+    max-width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #7b3f96;
+}
+
+h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #7b3f96;
+}
+
+/* Form structure */
+.form-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-left, .form-right {
+    width: 48%;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #7b3f96;
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #c508ff;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    background-color: #8e44ad;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #7b3f96;
+}
+

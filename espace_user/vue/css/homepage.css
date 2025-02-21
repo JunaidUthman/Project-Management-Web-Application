@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background: linear-gradient(180deg, #8e44ad, #f2e6ff);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    position: fixed; /* Fixe la sidebar à gauche */
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    top: 0;
+    left: 0;
+}
+
+.sidebar .buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+}
+
+.sidebar button {
+    background: none;
+    border: 1px solid white;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.sidebar button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background: #f7f7f7;
+    overflow-y: auto;
+    margin-left: 200px; /* Ajoute un espace pour la sidebar */
+    height: 100vh;
+}
+
+.hidden {
+    display: none;
+}
+
+.sidebar .logout {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Pour le tableau de bord des graphiques */
+#dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.box {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+
+/* Sidebar des notifications */
+.notifications {
+    width: 300px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background: #f2e6ff;
+    overflow-y: auto;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.notifications h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #8e44ad;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.notification img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.notification p {
+    margin: 0;
+    color: #555;
+}
+
+/* Ajustements pour éviter le défilement horizontal */
+body {
+    overflow-x: hidden;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin-left: 200px; /* Reserve space for sidebar */
+    margin-right: 320px; /* Reserve space for notification sidebar */
+    background: #f7f7f7;
+}
+
+.grid-box {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px; /* Reduce the height for smaller charts */
+}
+
+.grid-box h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.grid-box canvas {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.notification-sidebar {
+    width: 300px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 20px;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.notification-sidebar h2 {
+    font-size: 20px;
+    color: #a200ff;
+    margin-bottom: 20px;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.notification img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.notification p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.content-header {
+    margin-left: 200px; /* Adjust for the sidebar */
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+

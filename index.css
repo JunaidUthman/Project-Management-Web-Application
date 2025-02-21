@@ -1,0 +1,121 @@
+/* menu.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #7b3f96, #d1b3ff);
+    animation: gradientAnimation 8s infinite alternate;
+    z-index: -1;
+    color: #ecf0f1;
+    overflow: hidden;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Ajout d'objets animés en arrière-plan */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.floating-object {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    border-radius: 50%;
+    animation: float 4s ease-in-out infinite;
+    opacity: 0.5;
+}
+
+.floating-object:nth-child(2) {
+    left: 20%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+}
+
+.floating-object:nth-child(3) {
+    left: 50%;
+    animation-duration: 8s;
+    animation-delay: 2s;
+}
+
+.floating-object:nth-child(4) {
+    left: 70%;
+    animation-duration: 5s;
+    animation-delay: 1.5s;
+}
+
+/* Conteneur principal */
+.container {
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+}
+
+h1 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ecf0f1;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.box {
+    background-color: #efeaff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    height: 300px; /* Augmentation de la hauteur */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.box img {
+    max-width: 100%;
+    max-height: 250px; /* Limite pour éviter les débordements */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.box button {
+    background-color: #c639fd;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.box button:hover {
+    background-color: #8b06ff;
+    transform: scale(1.05);
+}

@@ -1,0 +1,289 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background: linear-gradient(180deg, #8e44ad, #f2e6ff);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    position: fixed; /* Fixe la sidebar à gauche */
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    top: 0;
+    left: 0;
+}
+
+.sidebar .buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+}
+
+.sidebar button {
+    background: none;
+    border: 1px solid white;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.sidebar button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background: #f7f7f7;
+    overflow-y: auto;
+    margin-left: 200px; /* Ajoute un espace pour la sidebar */
+    height: 100vh;
+}
+
+.hidden {
+    display: none;
+}
+
+.sidebar .logout {
+    margin-bottom: 20px;
+    width: 100%;
+}
+.menue{
+    width: 100%;
+    text-align: center;
+}
+/* Section des statistiques */
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    text-align: center;
+    gap: 20px;
+}
+
+.stat-box {
+    background-color: #f7f7f7;
+    color: #8e44ad;
+    border: 2px solid #8e44ad;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section pour le bouton Add Project */
+.add-project {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    padding-right: 20px;
+}
+.search_bar{
+    position: relative;
+    right: 80px;
+    width: 500px;
+    height: 40px;
+    border-color: #732d91;
+    border-radius: 5px;
+}
+.search_button{
+    position: relative;
+    right: 80px;
+    top: 2px;
+    width: 50px;
+    height: 46px;
+    background-color: #8e44ad;
+    border-radius: 5px;
+}
+.add-project-button {
+    background-color: #8e44ad;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-project-button:hover {
+    background-color: #732d91; /* Mauve plus sombre */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Section des projets */
+.projects-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-box {
+    background-color: #fff;
+    border: 2px solid #8e44ad;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chef_nom{
+    position: relative;
+    
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.chef-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #8e44ad;
+}
+
+.project-members {
+    display: flex;
+    justify-content: center;
+    gap: -10px; /* Superpose légèrement les images */
+}
+
+.member-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #8e44ad;
+}
+
+.project-status {
+    color: black;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+/* Titre du projet */
+.project-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #8e44ad;
+    background-color: #f2e6ff;
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+/* Chef de projet */
+.project-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.chef-name {
+    color: #333;
+}
+
+.chef-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #8e44ad;
+}
+
+/* Membres du projet */
+.project-members {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.member-image {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #8e44ad;
+}
+
+.member-count {
+    font-size: 14px;
+    color: #555;
+    font-weight: bold;
+}
+
+
+.see_more_button {
+    background-color: #8e44ad; /* Couleur mauve */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 270px;
+}
+
+.see_more_button:hover {
+    background-color: #732d91; /* Mauve plus sombre */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.update_buttons{
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+}
+.modifier_button{
+    width: 120px;
+    background-color: #5b04d6; /* Couleur mauve */
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.supprimer_button{
+    width: 110px;
+    background-color: #ff0101; /* Couleur mauve */
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
