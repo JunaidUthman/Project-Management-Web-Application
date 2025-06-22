@@ -5,3 +5,4 @@ It enables team collaboration by assigning employees to projects and facilitatin
  * Project Manager – Oversees project progress, assigns tasks, and manages teams.
  * Employees – View assigned projects, update task status, and communicate with the team.
 
+![Alt Text](dashboard.PNG)
